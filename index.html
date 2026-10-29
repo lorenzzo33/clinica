@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body style="margin:0">
+<title>Clínica Odonto Alameda</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Clínica odontológica: limpeza, clareamento, alinhadores, implantes e atendimento infantil. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: página única de conversão — cada bloco termina num convite ao WhatsApp; botão flutuante sempre visível */
+:root{
+  --bg:#F6F8F9; --surface:#FFFFFF; --ink:#13303A; --muted:#58707A; --line:#DCE5E8;
+  --accent:#1D6F84; --soft:#E3EFF2; --wa:#1FAF5A; --wa-ink:#FFFFFF;
+  --display:"Young Serif", Georgia, "Times New Roman", serif;
+  --body:"Manrope", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1B20; --surface:#14262D; --ink:#E4EEF1; --muted:#97AEB6; --line:#253B43;
+  --accent:#6CC1D6; --soft:#1A323A; --wa:#2BC36B; --wa-ink:#06150C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1B20; --surface:#14262D; --ink:#E4EEF1; --muted:#97AEB6; --line:#253B43;
+  --accent:#6CC1D6; --soft:#1A323A; --wa:#2BC36B; --wa-ink:#06150C; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+a{color:inherit}
+.in{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,6.4vw,60px)}
+h2{font-size:clamp(26px,4vw,38px)}
+h3{font-size:20px}
+p{margin:0}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lead{font-size:18px;color:var(--muted);max-width:56ch}
+
+/* botões */
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--wa);color:var(--wa-ink);text-decoration:none;font-weight:700;border-radius:999px;padding:14px 24px;font-size:16px;transition:transform .15s ease,filter .15s ease}
+.wa:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.wa svg{width:20px;height:20px;flex:none}
+.ghost{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:700;text-decoration:none;padding:14px 4px}
+.ghost:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+
+/* topo */
+.demo{background:var(--soft);color:var(--muted);font-size:13px;text-align:center}
+.demo .in{padding-block:8px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.top .in{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}
+.brand small{display:block;font-size:12px;color:var(--muted);letter-spacing:.04em}
+.top nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.top .wa{padding:10px 18px;font-size:15px}
+@media (max-width:780px){.top nav{display:none}}
+@media (max-width:420px){.top .wa span{display:none}.top .wa{padding:10px 12px}}
+
+/* hero */
+.hero .in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:center;padding-block:56px 64px}
+.hero-copy{display:flex;flex-direction:column;gap:20px;min-width:0}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px}
+.proof{display:flex;flex-wrap:wrap;gap:8px 20px;color:var(--muted);font-size:14px;font-weight:600}
+.proof span{display:inline-flex;align-items:center;gap:6px}
+.proof span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.chart-card .lbl{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chart-card svg{width:100%;height:auto;display:block}
+.chart-card p{font-size:14px;color:var(--muted)}
+@media (max-width:820px){.hero .in{grid-template-columns:1fr;padding-block:36px 44px}}
+
+/* blocos */
+section.block .in{padding-block:64px;display:flex;flex-direction:column;gap:28px}
+.head{display:flex;flex-direction:column;gap:10px;max-width:640px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.svc{background:var(--surface);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.svc p{color:var(--muted);font-size:15px;flex:1}
+.svc a{font-weight:700;color:var(--accent);text-decoration:none;font-size:15px}
+.svc a:hover{text-decoration:underline}
+@media (max-width:900px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.services{grid-template-columns:1fr}}
+
+.alt{background:var(--soft)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:flex;flex-direction:column;gap:8px;min-width:0;counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:22px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface);color:var(--accent);border:1px solid var(--line)}
+.steps p{color:var(--muted);font-size:15px}
+@media (max-width:720px){.steps{grid-template-columns:1fr}}
+
+.info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.info > div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+tr:last-child td{border-bottom:0}
+.addr{color:var(--muted)}
+@media (max-width:720px){.info{grid-template-columns:1fr}}
+
+.faq{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;line-height:1;color:var(--accent)}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);padding-bottom:18px;max-width:65ch}
+
+.final .in{padding-block:64px;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .in{padding-block:24px 96px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+/* botão flutuante */
+.float{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:60px;height:60px;border-radius:50%;padding:0;box-shadow:0 8px 24px rgba(15,60,40,.28)}
+.float svg{width:30px;height:30px}
+</style>
+
+<div class="demo" id="demo" hidden><div class="in">Página de demonstração: o número de WhatsApp ainda é de exemplo.</div></div>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#inicio" aria-label="Clínica Odonto Alameda, início">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="10" fill="var(--accent)"/><path d="M11 10c2-1.4 4 0 6 0s4-1.4 6 0c2.2 1.6 1.6 5.2.6 8-.8 2.3-1.1 6-2.6 6s-1.6-4-3-4-1.6 4-3 4-1.8-3.7-2.6-6c-1-2.8-1.6-6.4.6-8z" fill="var(--surface)"/></svg>
+      <span><b>Odonto Alameda</b><small>Clínica odontológica</small></span>
+    </a>
+    <nav aria-label="Seções"><a href="#tratamentos">Tratamentos</a><a href="#como">Como agendar</a><a href="#horarios">Horários</a><a href="#duvidas">Dúvidas</a></nav>
+    <a class="wa" data-wa="Olá! Gostaria de agendar uma consulta." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg><span>Agendar</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="in">
+      <div class="hero-copy">
+        <span class="eyebrow">Atendimento particular e convênios</span>
+        <h1>Dentista perto de você, com horário marcado pelo WhatsApp</h1>
+        <p class="lead">Avaliação completa, limpeza, clareamento, alinhadores e implantes. Você manda uma mensagem, a recepção responde com os horários livres e confirma sua consulta.</p>
+        <div class="cta-row">
+          <a class="wa" data-wa="Olá! Gostaria de agendar uma avaliação." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg>Agendar avaliação pelo WhatsApp</a>
+          <a class="ghost" href="#tratamentos">Ver tratamentos</a>
+        </div>
+        <div class="proof"><span>Resposta em horário comercial</span><span>Emergências no mesmo dia</span><span>Pix e cartão em até 10x</span></div>
+      </div>
+      <aside class="chart-card" aria-label="Exemplo de odontograma">
+        <span class="lbl">Na primeira consulta</span>
+        <svg viewBox="0 0 320 150" role="img" aria-label="Arcada dentária com os 16 dentes superiores numerados de 18 a 28, como no odontograma">
+          <g id="arch"></g>
+        </svg>
+        <p>A avaliação registra cada dente no odontograma, do 18 ao 28 na arcada superior, e você sai com um plano de tratamento por escrito e o orçamento.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="tratamentos">
+    <div class="in">
+      <div class="head"><span class="eyebrow">Tratamentos</span><h2>O que fazemos na clínica</h2></div>
+      <div class="services">
+        <div class="svc"><h3>Limpeza e prevenção</h3><p>Profilaxia, remoção de tártaro e aplicação de flúor. Recomendada a cada 6 meses.</p><a data-wa="Olá! Quero agendar uma limpeza." href="#" target="_blank" rel="noopener">Agendar limpeza</a></div>
+        <div class="svc"><h3>Clareamento</h3><p>Clareamento em consultório ou caseiro com moldeira, com avaliação de sensibilidade antes.</p><a data-wa="Olá! Quero saber sobre clareamento dental." href="#" target="_blank" rel="noopener">Perguntar sobre clareamento</a></div>
+        <div class="svc"><h3>Ortodontia e alinhadores</h3><p>Aparelho fixo ou alinhadores transparentes, com planejamento digital do sorriso.</p><a data-wa="Olá! Quero saber sobre aparelho e alinhadores." href="#" target="_blank" rel="noopener">Perguntar sobre aparelho</a></div>
+        <div class="svc"><h3>Implantes</h3><p>Reposição de dentes perdidos com implante e coroa, após exame de imagem.</p><a data-wa="Olá! Quero uma avaliação para implante." href="#" target="_blank" rel="noopener">Avaliar implante</a></div>
+        <div class="svc"><h3>Tratamento de canal</h3><p>Endodontia para aliviar a dor e salvar o dente, com anestesia e acompanhamento.</p><a data-wa="Olá! Estou com dor de dente e preciso de atendimento." href="#" target="_blank" rel="noopener">Estou com dor</a></div>
+        <div class="svc"><h3>Odontopediatria</h3><p>Primeira consulta a partir do primeiro dente, com atendimento calmo para crianças.</p><a data-wa="Olá! Quero agendar uma consulta para meu filho(a)." href="#" target="_blank" rel="noopener">Agendar para criança</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="como">
+    <div class="in">
+      <div class="head"><span class="eyebrow">Como agendar</span><h2>Três mensagens e sua consulta está marcada</h2></div>
+      <ol class="steps">
+        <li><h3>Mande uma mensagem</h3><p>Toque em qualquer botão verde. A conversa abre com o texto pronto, é só enviar.</p></li>
+        <li><h3>Escolha o horário</h3><p>A recepção envia os horários livres da semana e você escolhe o melhor.</p></li>
+        <li><h3>Receba a confirmação</h3><p>Você recebe o endereço e um lembrete um dia antes da consulta.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="horarios">
+    <div class="in">
+      <div class="head"><span class="eyebrow">Horários e endereço</span><h2>Onde e quando atendemos</h2></div>
+      <div class="info">
+        <div>
+          <h3>Horário de atendimento</h3>
+          <table><tbody>
+            <tr><td>Segunda a sexta</td><td>8h às 19h</td></tr>
+            <tr><td>Sábado</td><td>8h às 13h</td></tr>
+            <tr><td>Domingo e feriados</td><td>Fechado</td></tr>
+          </tbody></table>
+        </div>
+        <div>
+          <h3>Endereço</h3>
+          <p class="addr">Alameda das Acácias, 120, sala 304<br>Centro · CEP 00000-000</p>
+          <p class="addr">Estacionamento conveniado no prédio.</p>
+          <a class="ghost" data-wa="Olá! Pode me mandar a localização da clínica?" href="#" target="_blank" rel="noopener">Pedir localização no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="duvidas">
+    <div class="in">
+      <div class="head"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+      <div class="faq">
+        <details><summary>Vocês atendem convênio?</summary><p>Sim. Mande o nome do seu plano pelo WhatsApp e a recepção confirma a cobertura antes de marcar.</p></details>
+        <details><summary>Quanto custa a avaliação?</summary><p>A recepção informa o valor atualizado pelo WhatsApp. Na avaliação você recebe o plano de tratamento e o orçamento completo.</p></details>
+        <details><summary>Atendem urgência?</summary><p>Sim. Em caso de dor, inchaço ou dente quebrado, avise na mensagem e encaixamos você no mesmo dia, dentro do horário de atendimento.</p></details>
+        <details><summary>Quais formas de pagamento?</summary><p>Pix, débito e cartão de crédito em até 10x.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="in">
+      <h2>Pronto para cuidar do seu sorriso?</h2>
+      <p class="lead">Mande uma mensagem agora e receba os horários disponíveis desta semana.</p>
+      <a class="wa" data-wa="Olá! Gostaria de agendar uma consulta." href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="in"><span>Odonto Alameda · Responsável técnico: Dr(a). Nome Sobrenome · CRO-UF 00000</span><span>© 2026</span></div></footer>
+
+<a class="wa float" data-wa="Olá! Gostaria de agendar uma consulta." href="#" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-wa"/></svg></a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ic-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></symbol>
+</svg>
+
+<script>
+(function(){
+  /* Troque pelo número da clínica: 55 + DDD + número, só dígitos. */
+  var WHATSAPP = "5500000000000";
+  var isDemo = /^550+$/.test(WHATSAPP);
+  document.getElementById("demo").hidden = !isDemo;
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.getAttribute("data-wa"));
+  });
+
+  /* Arcada superior estilizada, numeração FDI 18→11 e 21→28 */
+  var g = document.getElementById("arch"), html = "";
+  var nums = [18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28];
+  var cx = 160, cy = 132, rx = 138, ry = 108;
+  nums.forEach(function(n, i){
+    var t = Math.PI * (0.06 + 0.88 * i / 15);
+    var x = cx - rx * Math.cos(t), y = cy - ry * Math.sin(t);
+    var w = (n % 10 >= 6) ? 17 : (n % 10 >= 4 ? 14 : 12);
+    var rot = (t * 180 / Math.PI) - 90;
+    html += '<g transform="translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') rotate(' + rot.toFixed(1) + ')">' +
+      '<rect x="' + (-w/2) + '" y="-9" width="' + w + '" height="18" rx="5" fill="var(--soft)" stroke="var(--accent)" stroke-width="1.2"/></g>';
+    var lx = cx - (rx - 26) * Math.cos(t), ly = cy - (ry - 26) * Math.sin(t) + 4;
+    html += '<text x="' + lx.toFixed(1) + '" y="' + ly.toFixed(1) + '" text-anchor="middle" font-size="9" font-family="Manrope, sans-serif" fill="var(--muted)">' + n + '</text>';
+  });
+  g.innerHTML = html;
+})();
+</script>
+
+</body>
+</html>
